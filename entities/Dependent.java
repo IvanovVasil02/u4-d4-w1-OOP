@@ -47,6 +47,16 @@ public class Dependent {
   public double calcTotalSalary(Dependent dependent, int extraHour) {
     return dependent.salary + (extraHour * this.basicSalary);
   }
+  public static int getTotalEmployeeSalary (Dependent[] salaries) {
+
+    int total = 0;
+
+    for (Dependent dependent : salaries) {
+      total += (int) dependent.salary + (5 * 30);
+    }
+    return total;
+
+  }
 
   public int getDependentId() {
     return dependentId;
@@ -64,16 +74,6 @@ public class Dependent {
     return department;
   }
 
-  public static int getTotalEmployeeSalary (Dependent[] salaries) {
-
-    int total = 0;
-
-    for (Dependent dependent : salaries) {
-      total += (int) dependent.salary;
-    }
-    return total;
-
-  }
 
 // setter
   public void setExtraordinary(double extraordinary) {
@@ -128,4 +128,10 @@ public class Dependent {
   public void printData(){
     System.out.println(toString());;
   }
+  public static void printData(Dependent[] dependents){
+    for (Dependent dependent : dependents){
+      System.out.println(dependent.toString());
+    }
+  }
+
 }
