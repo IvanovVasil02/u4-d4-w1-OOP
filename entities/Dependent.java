@@ -41,7 +41,7 @@ public class Dependent {
   }
 
   //  getter
-  public double getSalary(Dependent dependent) {
+  public static double getSalary(Dependent dependent) {
     return dependent.salary;
   }
   public double calcTotalSalary(Dependent dependent, int extraHour) {
@@ -64,15 +64,15 @@ public class Dependent {
     return department;
   }
 
-  public static int getTotalEmployeeSalary (int[] salaries) {
+  public static int getTotalEmployeeSalary (Dependent[] salaries) {
 
     int total = 0;
 
-    for (int i : salaries) {
-      total += i;
+    for (Dependent dependent : salaries) {
+      total += (int) dependent.salary;
     }
-
     return total;
+
   }
 
 // setter

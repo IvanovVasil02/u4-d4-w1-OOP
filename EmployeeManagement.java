@@ -16,7 +16,7 @@ public class EmployeeManagement {
 
     Dependent[] dependents = {dep1, dep2, dep3, dep4};
 
-
+    System.out.println(Dependent.getTotalEmployeeSalary(dependents));
   }
 
 }

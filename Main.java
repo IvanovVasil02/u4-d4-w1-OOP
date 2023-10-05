@@ -17,7 +17,7 @@ public class Main {
     gianFranco.setLevelUp();
     gianFranco.printData();
 
-    System.out.println(gianFranco.getSalary(gianFranco));
+    System.out.println(Dependent.getSalary(gianFranco));
     System.out.println(gianFranco.calcTotalSalary(gianFranco, 4));
   }
 
